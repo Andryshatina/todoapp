@@ -3,10 +3,9 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 16px 32px;
-
+	width: fit-content;
 	position: relative;
-	width: 100%;
-	min-height: 600px;
+	margin: auto;
 }
 
 .header{
@@ -28,6 +27,23 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 0px;
-	background: #FFFFFF;
+	background: white;
 }
 
+.beutyDiv1 {
+	height: 12px;
+	margin-left: 5%;
+	margin-right: 2%;
+	width: 93%;
+	background: white;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.beutyDiv2 {
+	height: 12px;
+	margin-left: 8%;
+	margin-right: 4%;
+	width: 88%;
+	background-color: white;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}

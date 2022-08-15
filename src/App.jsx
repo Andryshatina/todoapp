@@ -66,6 +66,8 @@ const App = () => {
         <TaskList taskList={onFilter()} toggleDone={toggleDone} deleteTask={deleteTask} />
         <BottomBar taskList={taskList} deleteCompleted={deleteCompleted} filter={filter} setFilter={setFilter} />
       </div>
+      <div className='beutyDiv1'></div>
+      <div className='beutyDiv2'></div>
     </div>
   );
 }
