@@ -2,7 +2,8 @@ import { useState } from 'react';
 import uniqid from 'uniqid';
 import './App.css';
 import TaskList from './Components/TaskList/TaskList';
-import Footer from './Components/Footer/Footer';
+import BottomBar from './Components/BottomBar/BottomBar';
+import AddTaskBar from './Components/AddTaskBar/AddTaskBar';
 
 const App = () => {
   const [input, setInput] = useState('');
@@ -29,7 +30,6 @@ const App = () => {
         return taskList;
     }
   };
-
 
   const onInputChange = (e) => {
     setInput(e.target.value);
@@ -58,17 +58,14 @@ const App = () => {
     setTaskList(temp);
   }
 
-  let filteredTaskList = onFilter()
   return (
-
     <div className="App">
       <h1>todos</h1>
-      <div className='AddTask' >
-        <input placeholder='What needs to be done?' value={input} onChange={(e) => onInputChange(e)} onKeyDown={(e) => addTask(e)} />
+      <div className=''>
+        <AddTaskBar value={input} onInputChange={onInputChange} addTask={addTask} />
+        <TaskList taskList={onFilter()} toggleDone={toggleDone} deleteTask={deleteTask} />
+        <BottomBar taskList={taskList} deleteCompleted={deleteCompleted} setFilter={setFilter} />
       </div>
-      <TaskList taskList={filteredTaskList} toggleDone={toggleDone} deleteTask={deleteTask} />
-      <Footer taskList={taskList} deleteCompleted={deleteCompleted} setFilter={setFilter} />
-      {console.log(filter)}
     </div>
   );
 }
