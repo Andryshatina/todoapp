@@ -1,1 +1,33 @@
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px 32px;
+
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+}
+
+.header{
+	margin: 16px auto;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 120%;
+	color: var(--title);
+}
+
+.items {
+	filter: drop-shadow(0px 35px 50px rgba(0, 0, 0, 0.2));
+	border: 1px solid var(--borderhint);
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	min-width: 900px;
+	left: 0px;
+	top: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	background: #FFFFFF;
+}
 

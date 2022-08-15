@@ -60,11 +60,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>todos</h1>
-      <div className=''>
+      <h1 className='header'>todos</h1>
+      <div className='items'>
         <AddTaskBar value={input} onInputChange={onInputChange} addTask={addTask} />
         <TaskList taskList={onFilter()} toggleDone={toggleDone} deleteTask={deleteTask} />
-        <BottomBar taskList={taskList} deleteCompleted={deleteCompleted} setFilter={setFilter} />
+        <BottomBar taskList={taskList} deleteCompleted={deleteCompleted} filter={filter} setFilter={setFilter} />
       </div>
     </div>
   );

@@ -1,0 +1,69 @@
+li{
+	height: 60px;
+
+	outline: none;
+	padding: 8px 8px 8px 12px;
+	gap: 16px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 120%;
+
+	box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+	display: flex;
+	gap: 16px;
+}
+
+.completed {
+	text-decoration-line: line-through;
+	color: var(--borderhint);
+}
+
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+
+	width: 32px;
+	height: 32px;
+
+	border: 1px solid var(--borderhint);
+	border-radius: 100%;
+
+	font: inherit;
+
+
+	display: grid;
+	place-content: center;
+}
+
+input[type="checkbox"]::before {
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 1em 1em var(--green);
+
+	transform-origin: bottom left;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+	transform: scale(1);
+}
+
+.deleteButton {
+	margin-left: auto;
+
+	color: var(--title);
+	border: none;
+	background-color: white;
+	font-size: 24px;
+}

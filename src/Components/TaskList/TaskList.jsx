@@ -1,10 +1,10 @@
 import React from 'react';
 import Task from '../Task/Task';
+import './TaskList.styles.css';
 
 const TaskList = ({ taskList, toggleDone, deleteTask }) => {
 	return (
-		<ul>
-
+		<ul className='TaskList'>
 			{
 				taskList.map((task, idx) => {
 					return (

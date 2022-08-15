@@ -1,11 +1,14 @@
+import './Task.styles.css';
 
 const Task = ({ task, idx, toggleDone, deleteTask }) => {
 
 	return (
-		<li>
-			<input type='checkbox' checked={task.isDone} onChange={() => toggleDone(idx)} />
-			{task.text}
-			<button onClick={() => deleteTask(idx)}>x</button>
+		<li >
+			<label className='container'>
+				<input type='checkbox' checked={task.isDone} onChange={() => toggleDone(idx)} />
+				<span className={task.isDone ? 'completed' : ''}>{task.text}</span>
+			</label>
+			<button className='deleteButton' onClick={() => deleteTask(idx)}>x</button>
 		</li>
 	)
 }
