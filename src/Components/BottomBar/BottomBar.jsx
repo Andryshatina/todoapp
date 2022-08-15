@@ -1,5 +1,5 @@
 
-const Footer = ({ taskList, deleteCompleted, setFilter }) => {
+const BottomBar = ({ taskList, deleteCompleted, setFilter }) => {
 
 	return (
 		<div>
@@ -14,4 +14,4 @@ const Footer = ({ taskList, deleteCompleted, setFilter }) => {
 	)
 }
 
-export default Footer;
+export default BottomBar;

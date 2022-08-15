@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans', sans-serif;
+	background: #E5E5E5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--title: rgba(175, 47, 47, 0.15);
+	--borderhint: #D0D0D0;
+	--black: #272424;
+	--gray: #676363;
+	--primary: #AF2F2F;
+	--hover: #D15555;
+	--background: #E5E5E5;
+	--check: #2FAFAF;
+}
